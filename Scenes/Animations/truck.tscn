@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://dx5gvrp47tneq"]
+
+[ext_resource type="Texture2D" uid="uid://4q1186hu36g2" path="res://Sprites/Truck/Truck.png" id="1_2j2r1"]
+
+[sub_resource type="Animation" id="Animation_2j2r1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_y60xj"]
+resource_name = "run"
+length = 0.6841751
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.11379788, 0.22898354, 0.34000587, 0.45519152, 0.5703772),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_av143"]
+_data = {
+&"RESET": SubResource("Animation_2j2r1"),
+&"run": SubResource("Animation_y60xj")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y60xj"]
+size = Vector2(121.5, 71)
+
+[node name="truck" type="Sprite2D" unique_id=1404882620]
+texture_filter = 1
+position = Vector2(520, 248)
+texture = ExtResource("1_2j2r1")
+hframes = 6
+region_enabled = true
+region_rect = Rect2(0, 46.03305, 840, 72.60278)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1914440161]
+libraries/ = SubResource("AnimationLibrary_av143")
+autoplay = &"run"
+
+[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=1857319310]
+position = Vector2(-2.5, 22.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=547649151]
+visible = false
+position = Vector2(-0.75, -22.5)
+shape = SubResource("RectangleShape2D_y60xj")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1596286673]
+zoom = Vector2(2.915, 2.915)

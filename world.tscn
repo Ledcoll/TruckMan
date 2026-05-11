@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://c7kj85b6asxl3"]
+
+[ext_resource type="PackedScene" uid="uid://dx5gvrp47tneq" path="res://Scenes/Animations/truck.tscn" id="1_f3sb7"]
+[ext_resource type="PackedScene" uid="uid://cwqeidwqoh8mk" path="res://Scenes/Ground.tscn" id="2_fj7yv"]
+[ext_resource type="Script" uid="uid://bs05l8t0xofvr" path="res://Scripts/truck.cs" id="2_tlwt5"]
+
+[node name="Node2D" type="Node2D" unique_id=973093246]
+
+[node name="Truck" parent="." unique_id=1404882620 instance=ExtResource("1_f3sb7")]
+z_index = 1
+position = Vector2(224, 240)
+script = ExtResource("2_tlwt5")
+
+[node name="chão" parent="." unique_id=380875640 instance=ExtResource("2_fj7yv")]
+position = Vector2(-32, -80)
+
+[node name="chão2" parent="." unique_id=638725617 instance=ExtResource("2_fj7yv")]
+position = Vector2(228, 285)
