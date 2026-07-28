@@ -8,11 +8,8 @@
 
 [node name="Truck" parent="." unique_id=1404882620 instance=ExtResource("1_f3sb7")]
 z_index = 1
-position = Vector2(224, 240)
+position = Vector2(222, 299)
 script = ExtResource("2_tlwt5")
 
-[node name="chão" parent="." unique_id=380875640 instance=ExtResource("2_fj7yv")]
-position = Vector2(-32, -80)
-
-[node name="chão2" parent="." unique_id=638725617 instance=ExtResource("2_fj7yv")]
+[node name="chão" parent="." unique_id=638725617 instance=ExtResource("2_fj7yv")]
 position = Vector2(228, 285)

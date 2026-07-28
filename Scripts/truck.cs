@@ -5,9 +5,10 @@ using System.Diagnostics;
 public partial class truck : Sprite2D
 {
 public int speed = 5;
+public bool isRight;
 	public override void _Ready()
 	{
-		GD.Print("test");
+		
 	}
 
 public void _process(double delta)
@@ -15,15 +16,19 @@ public void _process(double delta)
 		movement();
 	}
 
-	void movement ()
+	void movement()
 	{
 		if (Input.IsActionPressed("ui_right"))
 		{
 			Position += new Vector2(speed, 0);
+			isRight = true;
+			FlipH = false;
 		}
 		if (Input.IsActionPressed("ui_left"))
 		{
 			Position += new Vector2(-speed, 0);
+			isRight = false;
+			FlipH = true;
 		}
 		if (Input.IsActionPressed("ui_down"))
 		{
