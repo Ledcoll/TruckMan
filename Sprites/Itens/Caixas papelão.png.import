@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbtf2i1ii61ot"
-path="res://.godot/imported/Sprite-0001.png-d771d63d13809f85db0488262ae85d73.ctex"
+uid="uid://bjfqegck1fl08"
+path="res://.godot/imported/Caixas papelão.png-ad342787e5001dee167f43d7c356f823.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Scenario/Sprite-0001.png"
-dest_files=["res://.godot/imported/Sprite-0001.png-d771d63d13809f85db0488262ae85d73.ctex"]
+source_file="res://Sprites/Itens/Caixas papelão.png"
+dest_files=["res://.godot/imported/Caixas papelão.png-ad342787e5001dee167f43d7c356f823.ctex"]
 
 [params]
 

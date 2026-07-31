@@ -2,16 +2,16 @@ using Godot;
 using System;
 using System.Diagnostics;
 
-public partial class truck : Sprite2D
+public partial class Player : CharacterBody2D
 {
-public int speed = 5;
-public bool isRight;
+public int speed = 420;
+public bool isRight = true;
 	public override void _Ready()
 	{
-		
+	
 	}
 
-public void _process(double delta)
+public override void _Process(double delta)
 	{
 		movement();
 	}
@@ -20,23 +20,26 @@ public void _process(double delta)
 	{
 		if (Input.IsActionPressed("ui_right"))
 		{
-			Position += new Vector2(speed, 0);
+			Velocity = new Vector2(speed, 0);
 			isRight = true;
-			FlipH = false;
+			MoveAndSlide();
 		}
 		if (Input.IsActionPressed("ui_left"))
 		{
-			Position += new Vector2(-speed, 0);
+			Velocity = new Vector2(-speed, 0);
 			isRight = false;
-			FlipH = true;
+			MoveAndSlide();
 		}
 		if (Input.IsActionPressed("ui_down"))
 		{
-			Position += new Vector2(0, speed);
+			Velocity = new Vector2(0, 350);
+			MoveAndSlide();
 		}
 		if (Input.IsActionPressed("ui_up"))
 		{
-			Position += new Vector2(0, -speed);
+			Velocity = new Vector2(0, -350);
+			MoveAndSlide();
 		}
 	}
 }
+

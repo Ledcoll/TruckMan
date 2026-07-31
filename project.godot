@@ -59,6 +59,11 @@ ui_down={
 ]
 }
 
+[layer_names]
+
+2d_navigation/layer_1="Calçada"
+2d_navigation/layer_2="Asfalto"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"

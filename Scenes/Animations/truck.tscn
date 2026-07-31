@@ -6,24 +6,6 @@ load_path = "res://.godot/imported/Truck.png-0818ee69373a03f8b5274de9ae077152.ct
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y60xj"]
 size = Vector2(121.5, 71)
 
-[sub_resource type="CSharpScript" id="CSharpScript_h2klm"]
-script/source = "using Godot;
-using System;
-
-public partial class Camera2d : Camera2D
-{
-	// Called when the node enters the scene tree for the first time.
-	public override void _Ready()
-	{
-	}
-
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
-	{
-	}
-}
-"
-
 [sub_resource type="Animation" id="Animation_2j2r1"]
 length = 0.001
 tracks/0/type = "value"
@@ -131,13 +113,6 @@ position = Vector2(-2.5, 22.5)
 visible = false
 position = Vector2(-0.75, -22.5)
 shape = SubResource("RectangleShape2D_y60xj")
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1676942933]
-position = Vector2(24, -64)
-scale = Vector2(1, 1.6000006)
-ignore_rotation = false
-zoom = Vector2(2.5, 2.376)
-script = SubResource("CSharpScript_h2klm")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1914440161]
 libraries/ = SubResource("AnimationLibrary_av143")
